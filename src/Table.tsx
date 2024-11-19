@@ -308,26 +308,32 @@ const Table: ForwardRefRenderFunction<TableHandle, TableProps<any>> = function T
 					)}
 				</Box>
 
-				<DataGrid
-					columns={columns}
-					rows={rows}
-					rowCount={rowCount}
-					paginationModel={{ pageSize, page: page - 1  }}
-					onPaginationModelChange={model => {
-						setPage(model.page + 1);
-						setPageSize(model.pageSize);
-					}}
-					pageSizeOptions={[5,10,25]}
-					onSortModelChange={handleSortModelChange}
-					loading={isLoading}
-					paginationMode='server'
-					sortingMode='server'
-					disableColumnMenu
-					disableRowSelectionOnClick
-					sx={{
-						'&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus, &.MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within, &.MuiDataGrid-root .MuiDataGrid-cell:focus-within': {outline: 'none'},
-					}}
-				/>
+				<div style={{
+					display: 'flex',
+					flexDirection: 'column',
+					maxHeight: '75vh'
+				}}>
+					<DataGrid
+						columns={columns}
+						rows={rows}
+						rowCount={rowCount}
+						paginationModel={{ pageSize, page: page - 1  }}
+						onPaginationModelChange={model => {
+							setPage(model.page + 1);
+							setPageSize(model.pageSize);
+						}}
+						pageSizeOptions={[5,10,25]}
+						onSortModelChange={handleSortModelChange}
+						loading={isLoading}
+						paginationMode='server'
+						sortingMode='server'
+						disableColumnMenu
+						disableRowSelectionOnClick
+						sx={{
+							'&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus, &.MuiDataGrid-root .MuiDataGrid-cell:focus, &.MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within, &.MuiDataGrid-root .MuiDataGrid-cell:focus-within': {outline: 'none'},
+						}}
+					/>
+				</div>
 
 				{!hideDelete && (
 					<ConfirmationDialog
