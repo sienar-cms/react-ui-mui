@@ -6,7 +6,6 @@ export type * from './ConfirmationDialog.tsx';
 export { default as ConfirmationDialog } from './ConfirmationDialog.tsx';
 export type * from '@/drawers/index.ts';
 export * from '@/drawers/index.ts';
-export * from '@/externals.ts';
 export type * from '@/forms/index.ts';
 export * from '@/forms/index.ts';
 export type * from './layouts/index.tsx';
