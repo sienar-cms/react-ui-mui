@@ -2,12 +2,22 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
-import { viteExternals as coreViteExternals } from '@sienar/react-utils';
-import { viteExternals as uiViteExternals } from './src/externals.ts';
 
 const external = [
-	...coreViteExternals,
-	...uiViteExternals
+	'react',
+	'react/jsx-runtime',
+	'react-dom',
+	'react-router',
+	'react-router-dom',
+	/@emotion\/react/,
+	/@emotion\/styled/,
+	/@mui\/icons-material/,
+	/@mui\/material/,
+	/@mui\/x-data-grid/,
+	'@mui/x-date-pickers',
+	/@sienar\/react-utils/,
+	/dayjs/,
+	'notistack'
 ];
 
 // https://vitejs.dev/config/
