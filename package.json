@@ -21,7 +21,7 @@
 		"@mui/types": "7.2.18",
 		"@mui/x-data-grid": "7.22.1",
 		"@mui/x-date-pickers": "7.22.1",
-		"@sienar/react-utils": "0.1.2",
+		"@sienar/react-utils": "^0.1.0",
 		"@types/node": "22.5.5",
 		"@types/react": "18.3.1",
 		"@types/react-dom": "18.3.1",
