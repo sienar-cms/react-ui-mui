@@ -1,6 +1,6 @@
 {
 	"name": "@sienar/react-ui-mui",
-	"version": "0.2.0-alpha.2",
+	"version": "0.2.0-alpha.3",
 	"description": "A React UI library based on MUI for use with Sienar plugins",
 	"type": "module",
 	"main": "dist/sienar-react-ui-mui.js",
